@@ -5,64 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    public Panel currentPanel = null;
+    
 
-    private List<Panel> panelHistory = new List<Panel>();
-
-    private void start()
+    public void Main()
     {
-        SetupPanels();
-    }
-
-
-
-    public void SetupPanels()
-    {
-        Panel[] panels = GetComponentsInChildren<Panel>();
-
-        foreach(Panel panel in panels)
-        {
-            panel.Setup(this);
-        }
-
-        currentPanel.Show();
-    }
-
-    public void Update()
-    {
-        if(Input.GetButtonDown("Fire1"))
-        {
-            GoToPrevious();
-        }
-    }
-
-    public void GoToPrevious()
-    {
-
-        if(panelHistory.Count == 0)
-        {
-            return;
-        }
-
-        int lastIndex = panelHistory.Count -1;
-        SetCurrent(panelHistory[lastIndex]);
-        panelHistory.RemoveAt(lastIndex);
-
-    }
-
-    public void SetCurrentWithHistory(Panel newPanel)
-    {
-        panelHistory.Add(currentPanel);
-        SetCurrent(newPanel);
-    }
-
-    public void SetCurrent(Panel newPanel)
-    {
-        currentPanel.Hide();
-
-        currentPanel = newPanel;
-        currentPanel.Show();
-
+        SceneManager.LoadScene(0);
     }
 
 
@@ -106,9 +53,21 @@ public void level1()
         SceneManager.LoadScene(8);
     }
 
+    public void level9()
+    {
+       
+        SceneManager.LoadScene(9);
+    }
+
+    public void level10()
+    {
+        
+        SceneManager.LoadScene(10);
+    }
+
     public void Credit()
     {
-        SceneManager.LoadScene(9);
+        SceneManager.LoadScene(11);
     }
 
 }

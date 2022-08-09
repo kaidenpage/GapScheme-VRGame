@@ -14,7 +14,7 @@ public class Waypoints : MonoBehaviour
         foreach(Transform t in transform)
         {
             Gizmos.color = Color.blue;
-            Gizmos.DrawWireSphere(t.position, waypoinSize);
+            Gizmos.DrawSphere(t.position, waypoinSize);
 
         }
 
@@ -27,6 +27,12 @@ public class Waypoints : MonoBehaviour
 
        // Gizmos.DrawLine(transform.GetChild(transform.childCount - 1).position, transform.GetChild(0).position);
     }
+
+
+    // public DrawWaypoint(Transform Waypoint)
+    // {
+
+    // }
 
     public Transform GetNextWaypoint(Transform currentWaypoint)
     {

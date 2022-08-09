@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 97688388155475686}
   m_Layer: 0
   m_Name: RB
-  m_TagString: Untagged
+  m_TagString: ItemImage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -227,6 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WinLoseScript: {fileID: 0}
   player: {fileID: 0}
+  tackle: {fileID: 0}
 --- !u!54 &97688388155475686
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -7,13 +7,16 @@ public class PlayerTrigger : MonoBehaviour
     public WinLose WinLoseScript;
     public GameObject RB;
    
+   
     // Update is called once per frame
     void Update()
     {
         if( RB.transform.position.x >  5 + transform.position.x)
         {
+            
             WinLoseScript.LoseLevel();
         }
+        
 
 
     }

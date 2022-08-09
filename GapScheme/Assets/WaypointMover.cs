@@ -25,6 +25,7 @@ public class WaypointMover : MonoBehaviour
     private Transform initialPosition;
     bool isDoingSomething = true;
     float timer = 0f;
+    public AudioSource Hike;
 
     // Start is called before the first frame update
     void Start()
@@ -51,6 +52,7 @@ public class WaypointMover : MonoBehaviour
 
         isDoingSomething = true;
         timer = - 1000000000f;
+          Hike.Play();
     }
 
     
@@ -67,6 +69,7 @@ public class WaypointMover : MonoBehaviour
             {
                 isDoingSomething = false;
                 StartCoroutine(WaitForSec());
+
             }
 
              

@@ -9,6 +9,7 @@ public class WinLose : MonoBehaviour
     private bool gameEnded;
     public GameObject CompleteLevelUI;
     public GameObject LoseLevelUI;
+    public AudioSource touchdown;
 
     public void WinLevel()
     {
@@ -28,6 +29,7 @@ public class WinLose : MonoBehaviour
         if (!gameEnded)
         {
             Debug.Log("They scored a Touchdown, you lose!");
+            touchdown.Play();
             LoseLevelUI.SetActive(true);
             gameEnded = true;
         }
